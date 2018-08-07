@@ -3,6 +3,8 @@ const hbs  = require('hbs');//handler bar module
 
 const fs = require('fs');
 
+const port = process.env.PORT || 3500; //for deploying to heroku server 
+
 var app = express(); 
 
 hbs.registerPartials(__dirname+"/views/partials");
@@ -69,6 +71,6 @@ app.get('/bad', (req, res) => {
 
 
 //port for listening
-app.listen(3500, () => {
-    console.log('Server is up with port 3500');
+app.listen(port, () => {
+    console.log(`Server is up with port  ${port}`);
 });
