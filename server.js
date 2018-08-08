@@ -61,6 +61,11 @@ app.get('/about',(req, res) =>{
    });
 });
 
+app.get('/profile', (req, res) => {
+    res.render('profile.hbs',{
+       userMessage:"This is profile Page" 
+    });
+});
 
 app.get('/bad', (req, res) => {
    res.send({
