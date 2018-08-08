@@ -63,7 +63,8 @@ app.get('/about',(req, res) =>{
 
 app.get('/profile', (req, res) => {
     res.render('profile.hbs',{
-       userMessage:"This is profile Page" 
+        userMessage:"This is profile Page",
+        pageTitle: "Your Profile"
     });
 });
 
